@@ -15,28 +15,27 @@
       <article>
         <header class="display-5 mb-3 text-center">Cadastro de alunos</header>
       </article>
-      <form onsubmit="event.preventDefault(); saveStudents();" id="formProduct" class="col-md-10 offset-md-1">
+      <form onsubmit="event.preventDefault(); saveStudents();" id="form" class="col-md-10 offset-md-1">
         <div class="row mb-3">
           <label class="col-sm-2 col-form-label">
             Nome:
           </label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="name" placeholder="Nome do aluno: ">
+            <input type="text" class="form-control" id="name" placeholder="Nome do aluno: " required>
           </div>
         </div>
-
         <div class="row mb-3">
           <label class="col-sm-2 col-form-label">
             Email:
           </label>
           <div class="col-sm-4">
-            <input type="text" class="form-control" id="email" placeholder="Email do aluno: ">
+            <input type="text" class="form-control" id="email" placeholder="Email do aluno: " required>
           </div>
           <label class="col-sm-2 col-form-label">
             Telefone:
           </label>
           <div class="col-sm-4">
-            <input type="text" class="form-control" id="phone" placeholder="Email do aluno: ">
+            <input type="text" class="form-control" id="phone" placeholder="Telefone do aluno: " required>
           </div>
         </div>
         <div class="row mb-3">
@@ -44,7 +43,7 @@
             Curso
           </label>
           <div class="col-sm-4">
-            <select type="text" class="form-control" id="course">
+            <select type="text" class="form-control" id="course" required>
               <option value="" selected>Escolha: </option>
               <option value="1">Jornalismo</option>
               <option value="2">Qualidade</option>
@@ -106,6 +105,9 @@
       </section>
     </section>
   </main>
+  
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 

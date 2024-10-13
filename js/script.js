@@ -1,3 +1,5 @@
+$("#phone").mask("(99) 99999-9999");
+
 let students = [
   {
     id: 1,
@@ -42,6 +44,7 @@ function saveStudents() {
     }
   addNewRow(getStudents);
   students.push(getStudents);
+  document.getElementById("form").reset()
 }
 
 function loadStudents() {
@@ -61,7 +64,9 @@ function addNewRow(s) {
   newRow.insertCell().appendChild(nameNode);
 
   let emailNode = document.createTextNode(s.email);
-  newRow.insertCell().appendChild(emailNode);
+  cell = newRow.insertCell()
+  cell.className = "d-none d-md-table-cell"
+  cell.appendChild(emailNode);
 
   let phoneNode = document.createTextNode(s.phone);
   newRow.insertCell().appendChild(phoneNode);
@@ -81,5 +86,6 @@ function addNewRow(s) {
   }
 
   cell = newRow.insertCell()
+  cell.className = 'd-none d-md-table-cell'
   cell.innerHTML = periods;
 }
