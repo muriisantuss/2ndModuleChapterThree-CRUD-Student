@@ -15,7 +15,7 @@
       <article>
         <header class="display-5 mb-3 text-center">Cadastro de alunos</header>
       </article>
-      <form id="formProduct" class="col-md-10 offset-md-1">
+      <form onsubmit="event.preventDefault(); saveStudents();" id="formProduct" class="col-md-10 offset-md-1">
         <div class="row mb-3">
           <label class="col-sm-2 col-form-label">
             Nome:
@@ -45,7 +45,7 @@
           </label>
           <div class="col-sm-4">
             <select type="text" class="form-control" id="course">
-              <option value="">Escolha: </option>
+              <option value="" selected>Escolha: </option>
               <option value="1">Jornalismo</option>
               <option value="2">Qualidade</option>
               <option value="3">Ecônomia</option>
@@ -57,21 +57,21 @@
             Periodos
           </label>
           <div class="checks col-sm-4">
-            <div class="form-check" id="periods">
-              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="manha" value=""
                 checked>
               <label class="form-check-label" for="exampleRadios1">
                 Manhã
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="tarde" value="">
               <label class="form-check-label" for="exampleRadios2">
                 Tarde
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="noite" value="">
               <label class="form-check-label" for="exampleRadios3">
                 Noite
               </label>
