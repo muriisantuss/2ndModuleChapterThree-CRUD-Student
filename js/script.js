@@ -69,10 +69,14 @@ function addNewRow(s) {
   cell.appendChild(emailNode);
 
   let phoneNode = document.createTextNode(s.phone);
-  newRow.insertCell().appendChild(phoneNode);
+  cell = newRow.insertCell()
+  cell.className = "d-none d-sm-table-cell"
+  cell.appendChild(phoneNode);
 
   let courseNode = document.createTextNode(courses[s.course - 1].name);
-  newRow.insertCell().appendChild(courseNode);
+  cell = newRow.insertCell()
+  cell.className = "d-none d-sm-table-cell"
+  cell.appendChild(courseNode);
 
   var periods = ""
   if (s.manha) {
